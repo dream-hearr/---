@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML>
+<meta charset="UTF-8"> <!-- for HTML5 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html>
+     <body>
+
+        <div>
+            <p>0.测试说明(需连网)</p>
+            <p style="color: red;">由于模拟的数据库未按照严格的数据库设计规范，所以服务器端数据库信息和PHP编写的API程序未全部给出，仅以用户登录为例。</p>
+            <p>
+                
+                <a href="conn.php">点击查看（连接数据库）</a>
+ 		<br />
+        	<br />
+ 		<a href="stuLogin.php">点击查看（用户登录API）</a>
+            </p>
+        </div>
+        <br />
+
+        <div>
+            <p>1.用户登录测试</p>
+            <p style="color: red;">说明：根据用户输入学号和密码判断是否登录成功，成功返回“login-success”，失败返回“login-false”。</p>
+            <a href="http://www.prettygirl.vip/test/stuLogin.php?stuNum=2015011425&passWord=password">【登录成功】点击测试（http://www.prettygirl.vip/test/stuLogin.php?stuNum=2015011425&passWord=password）</a>
+            <a href="http://www.prettygirl.vip/test/stuLogin.php?stuNum=2015011426&passWord=password">
+            <br />
+            <br />
+            【登录失败】点击测试（http://www.prettygirl.vip/test/stuLogin.php?stuNum=2015011426&passWord=password）</a>
+        </div>
+
+        <br />
+        <br />
+        <div>
+            <p>2.学生信息查询测试</p>
+            <p style="color: red;">说明：根据用户输入学号和姓名查询是否有学生信息，成功返回学生信息（性别和专业，性别为0代表男，1代表女），失败返回“query-false”。</p>
+            <a href="http://www.prettygirl.vip/test/stuInfo.php?stuNum=2015011425&stuName=luffy">【查询成功】点击测试（http://www.prettygirl.vip/test/stuInfo.php?stuNum=2015011425&stuName=luffy）</a>
+            <a href="http://www.prettygirl.vip/test/stuInfo.php?stuNum=2015011426&stuName=luffy">
+            <br />
+            <br />
+            【查询失败】点击测试（http://www.prettygirl.vip/test/stuInfo.php?stuNum=2015011426&stuName=luffy）</a>
+        </div>
+
+        <br />
+        <br />
+        <div>
+            <p>3.本学期考试成绩查询测试</p>
+            <p style="color: red;">说明：根据用户输入学号查询学生本学期成绩信息，成功返回成绩信息，失败返回“query-false”。</p>
+            <a href="http://www.prettygirl.vip/test/stuGrade.php?stuNum=2015011425">【查询成功】点击测试（http://www.prettygirl.vip/test/stuGrade.php?stuNum=2015011425）</a>
+            <a href="http://www.prettygirl.vip/test/stuGrade.php?stuNum=2015011426">
+            <br />
+            <br />
+            【查询失败】点击测试（http://www.prettygirl.vip/test/stuGrade.php?stuNum=2015011426）</a>
+        </div>
+
+        <br />
+        <br />
+        <div>
+            <p>4.本学期考试安排查询测试</p>
+            <p style="color: red;">说明：根据用户输入学号查询学生本学期考试安排，成功返回考试安排信息，失败返回“query-false”。</p>
+            <a href="http://www.prettygirl.vip/test/testArrange.php?stuNum=2015011425">【查询成功】点击测试（http://www.prettygirl.vip/test/testArrange.php?stuNum=2015011425）</a>
+            <a href="http://www.prettygirl.vip/test/testArrange.php?stuNum=2015011426">
+            <br />
+            <br />
+            【查询失败】点击测试（http://www.prettygirl.vip/test/testArrange.php?stuNum=2015011426）</a>
+        </div>
+
+        <br />
+        <br />
+        <div>
+            <p>5.一卡通余额查询测试</p>
+            <p style="color: red;">说明：根据用户输入学号和一卡通密码查询一卡通余额，成功返回余额信息，失败返回“query-false”。</p>
+            <a href="http://www.prettygirl.vip/test/cardFee.php?stuNum=2015011425&cardPassword=123456">【查询成功】点击测试（http://www.prettygirl.vip/test/cardFee.php?stuNum=2015011425&cardPassword=123456）</a>
+            <a href="http://www.prettygirl.vip/test/cardFee.php?stuNum=2015011425&cardPassword=654321">
+            <br />
+            <br />
+            【查询失败】点击测试（http://www.prettygirl.vip/test/cardFee.php?stuNum=2015011425&cardPassword=654321）</a>
+        </div>
+
+        <br />
+        <br />
+        <div>
+            <p>6.宿舍剩余电量查询测试</p>
+            <p style="color: red;">说明：根据用户选择的公寓名称，楼号和输入的宿舍号来查询宿舍剩余电量，成功返回剩余电量，失败返回“query-false”。</p>
+            <a href="http://www.prettygirl.vip/test/Apartment.php?apartment=润杰公寓&floor=1&dormitoryNum=451">【查询成功】点击测试（http://www.prettygirl.vip/test/Apartment.php?apartment=润杰公寓&floor=1&dormitoryNum=451）</a>
+            <a href="http://www.prettygirl.vip/test/Apartment.php?apartment=润杰公寓&floor=1&dormitoryNum=506">
+            <br />
+            <br />
+            【查询失败】点击测试（http://www.prettygirl.vip/test/Apartment.php?apartment=润杰公寓&floor=1&dormitoryNum=506）</a>
+        </div>
+
+
+        <br />
+        <br />
+        <div>
+            <p>7.空闲教室信息查询测试</p>
+            <p style="color: red;">说明：根据用户选择的教学楼，时间段来查询空闲教室信息，成功返回空闲教室信息，失败返回“query-false”。</p>
+            <a href="http://www.prettygirl.vip/test/emptyRoom.php?building=三教&period=10:00-12:00">【查询成功】点击测试（http://www.prettygirl.vip/test/emptyRoom.php?building=三教&period=10:00-12:00）</a>
+        </div>
+
+
+        <br />
+        <br />
+        <div>
+            <p>8.本周课表信息查询测试</p>
+            <p style="color: red;">说明：根据用户输入的学号来查询本周课表信息，成功返回本周课表信息，失败返回“query-false”。</p>
+            <a href="http://www.prettygirl.vip/test/class.php?stuNum=2015011425">【查询成功】点击测试（http://www.prettygirl.vip/test/class.php?stuNum=2015011425）</a>
+        </div>
+
+        <br />
+        <br />
+        <div>
+            <p>9.显示学校最新通知测试</p>
+            <p style="color: red;">说明：调取最新的学校通知信息，成功返回通知信息，失败返回“query-false”。</p>
+            <a href="http://www.prettygirl.vip/test/schoolNotice.php">【查询成功】点击测试（http://www.prettygirl.vip/test/schoolNotice.php）</a>
+        </div>
+    </body>
+</html>

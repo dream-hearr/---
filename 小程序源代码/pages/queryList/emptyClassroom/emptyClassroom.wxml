@@ -1,0 +1,108 @@
+<!--pages/QueryList/emptyClassroom/emptyClassroom.wxml-->
+<view style='text-align: center;'>
+  <image class='cuppic' src='../../../images/queryList/emptyClassroom.jpg'></image>
+</view>
+<view style="border-top:5px dashed #A0EFFD">
+</view>
+<form bindsubmit='emptyClassroomQuery'>
+<view class="section">
+  <picker bindchange="bindPlaceChange" value="{{index}}" range="{{PlaceArray}}">
+    <view class="picker">
+      <text style='margin-left: 8px;font-size: 20px;'>教学楼：</text>
+      <text class='choose'>{{PlaceArray[index]}}（点击选择）</text>
+    </view>
+  </picker>
+  </view>
+
+<view class="section">
+  <picker bindchange="bindTimeChange" value="{{Timeindex}}" range="{{TimeArray}}">
+    <view class="picker">
+      <text style='margin-left: 8px;font-size: 20px;'>时间段：</text>
+      <text class='choose'>{{TimeArray[Timeindex]}}（点击选择）</text>
+    </view>
+  </picker>
+</view>
+
+   
+<view>  
+    <button style='font-family: Tahoma; margin-top: 15px;' type="primary" form-type="submit">查询</button>
+</view>
+</form> 
+
+<view style='disabled: true; visibility: {{visibile}};'>
+<view  class="center">
+  <text class="title">空闲教室</text>
+  <text style='font-size: 15px;'>（随机显示前4条）</text>
+</view>
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">1.{{place}}{{multiArray[0][0]}}</view>
+      <button class="check_btn" bindtap="togglePrefaceShowStatus" type="{{PrefaceContentShow?'warn':'primary'}}">{{PrefaceContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!PrefaceContentShow}}" class="{{PrefaceContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">时间段：{{period}}</view>
+      <view class="p">教室容量：{{multiArray[0][1]}}</view>
+      <view class="p">日期：{{date}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">2.{{place}}{{multiArray[1][0]}}</view>
+      <button class="check_btn" bindtap="toggleScopeShowStatus" type="{{ScopeContentShow?'warn':'primary'}}">{{ScopeContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!ScopeContentShow}}" class="{{ScopeContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">     
+        <view class="p">时间段：{{period}}</view>
+        <view class="p">教室容量：{{multiArray[1][1]}}</view>
+        <view class="p">日期：{{date}}</view>
+    </view>
+    </view>
+  </scroll-view>
+  </view>
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">3.{{place}}{{multiArray[2][0]}}</view>
+      <button class="check_btn" bindtap="toggleRefStandardShowStatus" type="{{RefStandardContentShow?'warn':'primary'}}">{{RefStandardContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!RefStandardContentShow}}" class="{{RefStandardContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">     
+        <view class="p" style='margin-top: 15px;'>时间段：{{period}}</view>
+        <view class="p">教室容量：{{multiArray[2][1]}}</view>
+        <view class="p">日期：{{date}}</view>
+    </view>
+    </view>
+  </scroll-view>
+  </view>
+
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">4.{{place}}{{multiArray[3][0]}}</view>
+      <button class="check_btn" bindtap="toggleDefinitionShowStatus" type="{{DefinitionContentShow?'warn':'primary'}}">{{DefinitionContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!DefinitionContentShow}}" class="{{DefinitionContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">时间段：{{period}}</view>
+      <view class="p">教室容量：{{multiArray[3][1]}}</view>
+      <view class="p">日期：{{date}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+</view>
+

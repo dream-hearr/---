@@ -1,0 +1,27 @@
+微信小程序发起网络请求通过调用API接口即可实现。其详细的介绍见：https://developers.weixin.qq.com/miniprogram/dev/api/network-request.html#wxrequestobject。
+
+wx.request({
+  url: 'test.php', //仅为示例，并非真实的接口地址
+  data: {
+     x: '' ,   //传递参数
+     y: ''
+  },
+  header: {
+      'content-type': 'application/json' // 默认值
+  },
+  success: function(res) {
+    console.log(res.data)  //返回的json数据
+  }
+})
+
+
+每个微信小程序需要事先设置一个通讯域名，小程序可以跟指定的域名与进行网络通信。包括普通 HTTPS 请求（request）、上传文件（uploadFile）、下载文件（downloadFile) 和 WebSocket 通信（connectSocket）
+域名只支持 https (request、uploadFile、downloadFile) 和 wss (connectSocket) 协议；
+域名不能使用 IP 地址或 localhost，且不能带端口号；
+域名必须经过 ICP 备案；
+出于安全考虑，api.weixin.qq.com 不能被配置为服务器域名，相关API也不能在小程序内调用。开发者应将 appsecret 保存到后台服务器中，通过服务器使用 appsecret 获取 accesstoken，并调用相关 API。
+对于每个接口，分别可以配置最多 20 个域名。
+
+由于域名ICP备案较为繁琐，而且审核流程较多，所以没有进行ICP备案，所以这里采用web网页的形式模拟微信小程序的网络请求。（微信小程序网络请求必须要通过ICP备案的域名，ICP备案特别麻烦，）
+
+打开 apiTest.html 文件（浏览器打开）查看测试。

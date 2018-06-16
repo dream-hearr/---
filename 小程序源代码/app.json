@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/queryList/classQuery/classQuery",
+    "pages/queryList/emptyClassroom/emptyClassroom",
+    "pages/queryList/schoolNotice/schoolNotice",
+    "pages/queryList/gradeQuery/gradeQuery",
+    "pages/queryList/testArrage/testArrage",
+    "pages/queryList/studentQuery/studentQuery",
+    "pages/queryList/cardQuery/cardQuery",
+    "pages/queryList/electricityFeeQuery/electricityFeeQuery",
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#7acfa6",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "",
+    "backgroundColor": "#7acfa6",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  
+  "networkTimeout": {
+    "request": 20000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  }
+}

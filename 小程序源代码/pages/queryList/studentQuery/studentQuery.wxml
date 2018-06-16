@@ -1,0 +1,43 @@
+
+<view style='text-align: center;'>
+  <image class='cuppic' src='../../../images/queryList/studentQuery.jpg'></image>
+</view>
+<view style="border-top:5px dashed #A0EFFD">
+</view>
+<form bindsubmit='stuQuery'>
+<view style='margin-top: 10px;'>
+  <label style='vertical-align:middle; font-family: "Tahoma"; display: inline-block;margin-left: 70px;font-size: 20px;'>学号：</label>
+  <input style='vertical-align:middle; display: inline-block;' type='number'  placeholder='请输入学号' name='stuNumber' ></input>
+</view>
+
+<view style='margin-top: 10px;'>
+  <label style='vertical-align:middle; font-family: "Tahoma"; display: inline-block;margin-left: 70px;font-size: 20px;'>姓名：</label>
+  <input style='vertical-align:middle; display: inline-block;' type='text' name='stuName' placeholder='请输入姓名'></input>
+</view>
+   
+<view>  
+    <button style='font-family: Tahoma; margin-top: 15px;' type="primary" form-type="submit">查询</button>
+</view>
+</form> 
+
+<textarea class='areastyle' disabled='true'  style='visibility: {{visibile}};'>
+<view class='news' style='visibility: {{visibile}};'>
+    <text>查询结果</text>
+</view>
+<view class='result' style='visibility: {{visibile}};'>
+    <text>姓名：</text>
+    <text>{{stuName}}</text>
+</view>
+<view class='result' style='visibility: {{visibile}};'>
+    <text>学号：</text>
+    <text>{{stuNumber}}</text>
+</view>
+<view class='result' style='visibility: {{visibile}};'>
+    <text>性别：</text>
+    <text>{{sex}}</text>
+</view>
+<view class='result' style='visibility: {{visibile}};'>
+    <text>专业：</text>
+    <text>{{major}}</text>
+</view>
+</textarea>

@@ -1,0 +1,79 @@
+<!--pages/QueryList/schoolNotice/schoolNotice.wxml-->
+<view style='text-align: center;'>
+  <image class='cuppic' src='../../../images/queryList/schoolNotice.jpg'></image>
+</view>
+<view style="border-top:5px dashed #A0EFFD">
+</view>
+<view  class="center">
+  <text class="title">最新通知</text>
+  <text style='font-size: 15px;'>（仅显示前4条）</text>
+</view>
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">1.{{multiArray[0][0]}}</view>
+      <button class="check_btn" bindtap="togglePrefaceShowStatus" type="{{PrefaceContentShow?'warn':'primary'}}">{{PrefaceContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!PrefaceContentShow}}" class="{{PrefaceContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">内容：{{multiArray[0][1]}}</view>
+      <view class="p">发布人：{{multiArray[0][2]}}</view>
+      <view class="p">日期：{{multiArray[0][3]}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">2.{{multiArray[1][0]}}</view>
+      <button class="check_btn" bindtap="toggleScopeShowStatus" type="{{ScopeContentShow?'warn':'primary'}}">{{ScopeContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!ScopeContentShow}}" class="{{ScopeContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">     
+        <view class="p">内容：{{multiArray[1][1]}}</view>
+        <view class="p">发布人：{{multiArray[1][2]}}</view>
+        <view class="p">日期：{{multiArray[1][3]}}</view>
+    </view>
+    </view>
+  </scroll-view>
+  </view>
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">3.{{multiArray[2][0]}}</view>
+      <button class="check_btn" bindtap="toggleRefStandardShowStatus" type="{{RefStandardContentShow?'warn':'primary'}}">{{RefStandardContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!RefStandardContentShow}}" class="{{RefStandardContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">     
+        <view class="p">内容：{{multiArray[2][1]}}</view>
+        <view class="p">发布人：{{multiArray[2][2]}}</view>
+        <view class="p">日期：{{multiArray[2][3]}}</view>
+    </view>
+    </view>
+  </scroll-view>
+  </view>
+
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">4.{{multiArray[3][0]}}</view>
+      <button class="check_btn" bindtap="toggleDefinitionShowStatus" type="{{DefinitionContentShow?'warn':'primary'}}">{{DefinitionContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!DefinitionContentShow}}" class="{{DefinitionContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">内容：{{multiArray[3][1]}}</view>
+      <view class="p">发布人：{{multiArray[3][2]}}</view>
+      <view class="p">日期：{{multiArray[3][3]}}</view>
+    </view>
+  </scroll-view>
+</view>

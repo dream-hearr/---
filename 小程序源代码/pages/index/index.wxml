@@ -1,0 +1,51 @@
+<view style="overflow:auto;overflow-x: hidden">
+<view style='text-align: center;'>
+  <image class='cuppic' src='../../images/index/cup.jpg'></image>
+</view>
+<view style="border-top:5px dashed #A0EFFD">
+</view>
+<view class='imgsview'>
+    <image class='imgstyle' src='../../images/index/classQuery.png'></image>
+    <image class='imgstyle' src='../../images/index/gradeQuery.png'></image>
+    <image class='imgstyle' src='../../images/index/testArrage.png' ></image>
+    <image class='imgstyle' src='../../images/index/emptyClassroomQuery.png'></image>
+</view>
+<view>
+  <text class='textstyle' bindtap='jumptoClassQuery'>{{classQuery}}</text>
+  <text class='textstyle' bindtap='jumptoGradeQuery'>{{gradeQuery}}</text>
+  <text class='textstyle' bindtap='jumptoTestArrage'>{{testArrage}}</text>
+  <text class='textstyle' bindtap='jumptoEmptyClassroomQuery'>{{emptyClassroomQuery}}</text>
+</view>
+
+<view class='imgsview'>
+    <image class='imgstyle' src='../../images/index/studentQuery.png'></image>
+    <image class='imgstyle' src='../../images/index/cardQuery.png'></image>
+    <image class='imgstyle' src='../../images/index/electricityFeeQuery.png' ></image>
+    <image class='imgstyle' src='../../images/index/schoolNotice.png'></image>
+</view>
+<view>
+  <text class='textstyle' bindtap='jumptoStudentQuery'>{{studentQuery}}</text>
+  <text class='textstyle' bindtap='jumptoCardQuery'>{{cardQuery}}</text>
+  <text class='textstyle' bindtap='jumptoElectricityFeeQuery'>{{electricityFeeQuery}}</text>
+  <text class='textstyle' bindtap='jumptoSchoolNotice'>{{schoolNotice}}</text>
+</view>
+
+<view style="margin-top: 15px; border-top:5px dashed #A0EFFD">
+
+</view>
+<view>
+  <view class='news'>
+    <text>最新消息</text>
+  </view>
+  <view class='areastyle'>
+    <textarea  disabled='true' style='text-align: left; margin: 20px 15px -10px 15px;'>{{newsValue}}
+    </textarea>
+  </view>
+</view>
+<view style="margin-top: 15px; border-top:5px dashed #A0EFFD">
+
+</view>
+<view class='dateStyle'>
+    {{date}}
+</view>
+</view>

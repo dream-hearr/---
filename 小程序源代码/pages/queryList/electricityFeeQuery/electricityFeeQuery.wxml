@@ -1,0 +1,47 @@
+<view style='text-align: center;'>
+  <image class='cuppic' src='../../../images/queryList/electricityFeeQuery.jpg'></image>
+</view>
+<view style="border-top:5px dashed #A0EFFD">
+</view>
+<form bindsubmit='electricityFeeQuery'>
+<view class="section">
+  <picker bindchange="bindApartmentChange" value="{{index}}" range="{{ApartmentArray}}">
+    <view class="picker">
+      <text style='margin-left: 10px;font-size: 20px;'>公寓：</text>
+      <text class='choose'>{{ApartmentArray[index]}}（点击选择）</text>
+    </view>
+  </picker>
+  </view>
+
+<view class="section">
+  <picker bindchange="bindFloorChange" value="{{Floorindex}}" range="{{FloorArray}}">
+    <view class="picker">
+      <text style='margin-left: 10px;font-size: 20px;'>楼号：</text>
+      <text class='choose'>{{FloorArray[Floorindex]}}（点击选择）</text>
+    </view>
+  </picker>
+</view>
+
+<view style='margin-top: 10px;'>
+  <label style='vertical-align:middle; font-family: "Tahoma"; display: inline-block;margin-left: 70px;font-size: 20px;'>寝室：</label>
+  <input style='vertical-align:middle; display: inline-block;' type='number' name='roomNumber' placeholder='请输入寝室号'></input>
+</view>
+   
+<view>  
+    <button style='font-family: Tahoma; margin-top: 15px;' type="primary" form-type="submit">查询</button>
+</view>
+</form> 
+
+<textarea class='areastyle' disabled='true' style='visibility: {{visibile}};'>
+<view class='news' style='visibility: {{visibile}};'>
+    <text>查询结果</text>
+</view>
+<view class='result' style='visibility: {{visibile}};'>
+    <text>地址：</text>
+    <text>{{address}}</text>
+</view>
+<view class='result' style='visibility: {{visibile}};'>
+    <text>剩余电量：</text>
+    <text>{{lastElectricity}}</text>
+</view>
+</textarea>

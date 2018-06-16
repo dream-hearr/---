@@ -1,0 +1,84 @@
+<!--pages/QueryList/gradeQuery/gradeQuery.wxml-->
+<view style='text-align: center;'>
+  <image class='cuppic' src='../../../images/queryList/gradeQuery.jpg'></image>
+</view>
+<view style="border-top:5px dashed #A0EFFD">
+</view>
+<view  class="center">
+  <text class="title">{{stuName}}同学，你本学期的考试成绩如下</text>
+</view>
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">1.{{multiArray[0][0]}}</view>
+      <button class="check_btn" bindtap="togglePrefaceShowStatus" type="{{PrefaceContentShow?'warn':'primary'}}">{{PrefaceContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!PrefaceContentShow}}" class="{{PrefaceContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">任课教师：{{multiArray[0][1]}}</view>
+      <view class="p">成绩：{{multiArray[0][2]}}</view>
+      <view class="p">班级平均分：{{multiArray[0][3]}}</view>
+      <view class="p">是否通过：{{multiArray[0][4]}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">2.{{multiArray[1][0]}}</view>
+      <button class="check_btn" bindtap="toggleScopeShowStatus" type="{{ScopeContentShow?'warn':'primary'}}">{{ScopeContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!ScopeContentShow}}" class="{{ScopeContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">     
+        <view class="p">任课教师：{{multiArray[1][1]}}</view>
+        <view class="p">成绩：{{multiArray[1][2]}}</view>
+        <view class="p">班级平均分：{{multiArray[1][3]}}</view>
+        <view class="p">是否通过：{{multiArray[1][4]}}</view>
+    </view>
+    </view>
+  </scroll-view>
+  </view>
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">3.{{multiArray[2][0]}}</view>
+      <button class="check_btn" bindtap="toggleRefStandardShowStatus" type="{{RefStandardContentShow?'warn':'primary'}}">{{RefStandardContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!RefStandardContentShow}}" class="{{RefStandardContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">     
+        <view class="p">任课教师：{{multiArray[2][1]}}</view>
+        <view class="p">成绩：{{multiArray[2][2]}}</view>
+        <view class="p">班级平均分：{{multiArray[2][3]}}</view>
+        <view class="p">是否通过：{{multiArray[2][4]}}</view>
+    </view>
+    </view>
+  </scroll-view>
+  </view>
+
+
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">4.{{multiArray[3][0]}}</view>
+      <button class="check_btn" bindtap="toggleDefinitionShowStatus" type="{{DefinitionContentShow?'warn':'primary'}}">{{DefinitionContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!DefinitionContentShow}}" class="{{DefinitionContentShow?'show':''}}">
+    <view class="content">
+      <view class="p">任课教师：{{multiArray[3][1]}}</view>
+      <view class="p">成绩：{{multiArray[3][2]}}</view>
+      <view class="p">班级平均分：{{multiArray[3][3]}}</view>
+      <view class="p">是否通过：{{multiArray[3][4]}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+
